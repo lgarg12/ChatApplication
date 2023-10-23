@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Style for WebKit-based browsers (e.g., Chrome) */
+/* You may need to adjust these values to fit your desired appearance */
+
+/* Thin scrollbar track */
+::-webkit-scrollbar {
+    width: 6px; /* Adjust as needed */
+  }
+  
+  /* Thin scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 3px; /* Adjust as needed */
+  }
+  
+  /* Thin scrollbar track on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color on hover */
+  }
+  
+  /* Thin scrollbar track when scrolling */
+  ::-webkit-scrollbar-thumb:active {
+    background: #333; /* Color when scrolling */
+  }
+  

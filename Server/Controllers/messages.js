@@ -97,5 +97,21 @@ const getUsers = async (req, res) => {
         });
     }
 }
+const AllMessages = async (req, res) => {
+    try {
+        const userID = req.params.userID;
+        const messages = await Message.find({ senderId: userID }); // Wait for the query to complete
 
-module.exports = { conversation , allConversation , sendMessage , conversationMessages , getUsers}
+        res.status(200).json({
+            success: true,
+            messages: messages, // Send the messages in the response
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error,
+        });
+    }
+};
+
+module.exports = { conversation , allConversation , sendMessage , conversationMessages , getUsers ,AllMessages}
